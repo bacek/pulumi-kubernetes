@@ -69,7 +69,7 @@ func PulumiSchema(swagger map[string]interface{}) pschema.PackageSpec {
 					TypeSpec:    pschema.TypeSpec{Type: "string"},
 				},
 				"deleteUnreachable": {
-					Description: "If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state",
+					Description: "If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state. It can also be sourced from the following environment variable: `PULUMI_K8S_DELETE_UNREACHABLE`",
 					TypeSpec:    pschema.TypeSpec{Type: "boolean"},
 				},
 				"enableDryRun": {

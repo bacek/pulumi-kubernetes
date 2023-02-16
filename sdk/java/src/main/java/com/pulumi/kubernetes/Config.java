@@ -26,7 +26,7 @@ public final class Config {
         return Codegen.stringProp("context").config(config).get();
     }
 /**
- * If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state
+ * If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state. It can also be sourced from the following environment variable: `PULUMI_K8S_DELETE_UNREACHABLE`
  * 
  */
     public Optional<Boolean> deleteUnreachable() {

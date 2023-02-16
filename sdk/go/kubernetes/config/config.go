@@ -18,7 +18,7 @@ func GetContext(ctx *pulumi.Context) string {
 	return config.Get(ctx, "kubernetes:context")
 }
 
-// If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state
+// If present and set to true, the provider will delete resources associated with an unreachable Kubernetes cluster from Pulumi state. It can also be sourced from the following environment variable: `PULUMI_K8S_DELETE_UNREACHABLE`
 func GetDeleteUnreachable(ctx *pulumi.Context) bool {
 	return config.GetBool(ctx, "kubernetes:deleteUnreachable")
 }
